@@ -2,7 +2,7 @@ import java.io.IOException;
 
 public class Four {
     private int id;
-    private float temperature = 100;
+    private float temperature = 120;
     private CapteurTemperature capteur;
     private EnregistreurDonnees enregistreur;
     private Actionneur chauffage;
