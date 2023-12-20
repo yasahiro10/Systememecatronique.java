@@ -1,0 +1,6 @@
+ID: 1, Temperature: 55.0
+ID: 2, Temperature: 200.0
+ID: 1, Temperature: 55.0
+ID: 2, Temperature: 200.0
+ID: 1, Temperature: 55.0
+ID: 2, Temperature: 200.0

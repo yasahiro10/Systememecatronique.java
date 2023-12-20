@@ -1,0 +1,57 @@
+@startuml
+
+abstract class Actionneur {
+  + heating(f: Four): void
+  + cooling(f: Four): void
+}
+
+class CapteurTemperature {
+  + readTemperature(f: Four): float
+}
+
+class Chauffage {
+  + heating(f: Four): void
+  + cooling(f: Four): void
+}
+
+class EnregistreurDonnees {
+  + saveData(f: Four): void
+}
+
+class Four {
+  - id: int
+  - temperature: float = 25
+  - capteur: CapteurTemperature
+  - enregistreur: EnregistreurDonnees
+  - chauffage: Actionneur
+  - refroidissement: Actionneur
+
+  + getTemperature(): float
+  + setTemperature(temperature: float): void
+  + getCapteur(): CapteurTemperature
+  + setCapteur(capteur: CapteurTemperature): void
+  + getEnregistreur(): EnregistreurDonnees
+  + setEnregistreur(enregistreur: EnregistreurDonnees): void
+  + getChauffage(): Actionneur
+  + setChauffage(chauffage: Actionneur): void
+  + getRefroidissement(): Actionneur
+  + setRefroidissement(refroidissement: Actionneur): void
+  + monitorTemperature(): void
+  + adjustHeating(): void
+  + adjustCooling(): void
+  + recordData(): void
+  + getId(): int
+  + setId(id: int): void
+}
+
+class Refroidissement {
+  + heating(f: Four): void
+  + cooling(f: Four): void
+}
+
+Actionneur --o Four: "OneToOne"
+Four --o CapteurTemperature: "OneToOne"
+Four --o EnregistreurDonnees: "OneToOne"
+Four --o Actionneur: "OneToTwo"
+
+@enduml
