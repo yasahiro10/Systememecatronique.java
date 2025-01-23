@@ -6,7 +6,7 @@ This is an initial project for a mechatronic system simulation. The project is i
 ## UML Diagram
 Below is the UML diagram for the project:
 
-![UML Diagram](projet module_.drawio.png)
+![UML Diagram](projetmodule_.drawio.png)
 
 ## Getting Started
 To get started with the project, clone the repository and open it in your preferred Java development environment. Ensure you have the necessary dependencies installed.
